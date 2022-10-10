@@ -1,0 +1,190 @@
+<html>
+<head>
+	<title>Selectors</title>
+	<style>
+		*{
+		font-family: sans-serif;
+		}
+		.descendant{
+		font-size:20px;
+		}
+		.descendant p{
+		color:aqua;
+		font-size:0.9em;
+		text-align:justify;
+		}
+		.child>p{
+		color:red;
+		font-size:20px;
+		text-align:justify;
+		}
+		.adjacent+p{
+		color:blue;
+		font-size:20px;
+		text-align:justify;
+		}
+		.general~p{
+		color:green;
+		font-size:20px;
+		text-align:justify;
+		}
+		.hover p{
+		font-size:18px;
+		color:skyblue;
+		}
+		.hover p:hover{
+		font-size:24px;
+		color:green;
+		}
+		.link a:link{
+		font-size:20px;
+		color:red;
+		text-decoration:none;
+		}
+		.link a:visited{
+		color:violet;
+		}
+		.focus input:focus{
+		background-color:black;
+		color:white;
+		}
+		.fletter p::first-letter{
+		color:red;
+		}
+		.fline p::first-line{
+		color:red;
+		}
+		.before p::before{
+		content:"hi ";
+		color:red;
+		font-size:20px;
+		}
+		.after p::after{
+		content:" hi";
+		color:red;
+		font-size:20px;
+		}
+		::marker{
+		color:red;
+		}
+		.select p::selection{
+		background-color:red;
+		color:white;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1><u>Combinator</u></h1>
+		
+		<div class="descendant">
+		<h2>Descendant Selector</h2>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<div>
+				<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+				in the Indian Premier League.</p>
+			</div>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>Child Selctor</h2>
+		<div class="child">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<div>
+				<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+				in the Indian Premier League.</p>
+			</div>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>Adjacent Selector</h2>
+		<div>
+			<div class="adjacent">
+				<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+				in the Indian Premier League.</p>
+			</div>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>General Selector</h2>
+		<div>
+			<div class="general">
+				<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+				in the Indian Premier League.</p>
+			</div>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+	</div>
+	<div>
+		<h1>Pseudo-Classes</h1>
+		<div class="hover">
+			<h2>Hover</h2>
+			<p>Hi Everyone</p>
+		</div>
+		<div class="link">
+			<h2>Link & Visited </h2>
+			<a href="sementic.html">Visited</a>
+		</div>
+		<div class="focus">
+			<h2>Focus</h2>
+			<input type="text" name="focus" placeholder="Enter Your Name">
+		</div>
+	</div>
+	<div>
+		<h1>Pseudo Elements</h1>
+		<h2>First Letter</h2>
+		<div class="fletter">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>First Line</h2>
+		<div class="fline">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			<br>in the Indian Premier League.</p>
+		</div>
+		<h2>Before</h2>
+		<div class="before">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>Before</h2>
+		<div class="after">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+		<h2>Marker</h2>
+		<div>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+			</ul>
+			<ol>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+			</ol>
+		</div>
+		<h2>Selection</h2>
+		<div class="select">
+			<p>In Indian domestic cricket he played for Bihar India and Jharkhand Cricket team.He is the captain of Chennai Super Kings (CSK) 
+			in the Indian Premier League.</p>
+		</div>
+	</div>
+</body>
+</html>
